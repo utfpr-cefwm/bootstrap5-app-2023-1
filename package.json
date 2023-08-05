@@ -1,13 +1,16 @@
 {
-  "name": " ",
+  "name": "bootstrap5-app",
   "version": "0.0.1",
-  "description": "",
-  "keywords": "",
-  "license": "",
-  "author": "",
+  "description": "Aplicativo de exemplo utilizando BS5 e JS",
+  "keywords": [
+    "bootstrap",
+    "bootstrap5"
+  ],
+  "license": "MIT",
+  "author": "Rui Pimentel Leite",
   "scripts": {
     "build": "parcel build index.html",
-    "dev": "parcel index.html --open",
+    "dev": "parcel index.html",
     "start": "npm run build && npm run dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
