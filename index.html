@@ -23,16 +23,26 @@
 
 <body>
 
-  <div class="border d-flex bg-dark text-white">
-    <nav class="bg-primary border" style="min-width: 15rem;">
-      Nav
-    </nav>
-    <main class="flex-grow-1 bg-secondary border">
-      Main
-    </main>
-    <aside class="bg-success border" style="min-width: 15rem;">
-      Aside
-    </aside>
+  <div class="d-flex flex-column bg-dark min-vh-100">
+    <header class="bg-warning">
+      Header
+    </header>
+    <div class="flex-grow-1 border d-flex flex-column flex-lg-row bg-dark text-white">
+      <main class="order-lg-2 flex-grow-1 bg-secondary border">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio qui beatae provident omnis at! Distinctio ad aspernatur libero quaerat consectetur veniam laboriosam, placeat dignissimos possimus? Error alias commodi nesciunt totam.
+        Blanditiis fugiat eveniet minima ea aliquam libero consequuntur molestiae eos officiis sapiente dolorum et totam, soluta maiores provident obcaecati exercitationem voluptas sint distinctio. Voluptatibus laboriosam quos id mollitia fugit aperiam.
+        Consequuntur sequi fugit consectetur cupiditate error explicabo dolorem odit excepturi odio! Dolores corporis minima autem impedit voluptate. Veritatis, sapiente nisi asperiores, at ad ipsa neque explicabo, magnam qui saepe vero?
+      </main>
+      <aside class="order-lg-3 bg-success border" style="min-width: 15rem;">
+        Aside
+      </aside>
+      <nav class="order-lg-1 bg-primary border" style="min-width: 15rem;">
+        Nav
+      </nav>
+    </div>
+    <footer class="bg-info">
+      Footer
+    </footer>
   </div>
 
 
