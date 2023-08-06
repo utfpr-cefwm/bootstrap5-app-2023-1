@@ -47,6 +47,41 @@
       </div>
     </nav>
     <main class="flex-grow-1 p-2 text-center">
+
+      <div class="p-5 mb-4 bg-light rounded-3">
+        <div class="container-fluid py-5">
+          <h1 class="display-5 fw-bold">
+            Seletor de cor
+          </h1>
+          <p class="col-md-8 mx-auto fs-4">
+            Informe o nome ou código da cor no campo abaixo para obter um preview.
+          </p>
+        </div>
+      </div>
+
+      <form class="mx-auto" style="max-width: 30rem;">
+        <div class="mb-3">
+          <label
+            for="exampleInputEmail1"
+            class="form-label"
+          >
+            Cor:
+          </label>
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+          />
+          <div id="emailHelp" class="form-text">
+            A cor deve ser informada em um dos padrões "Web colors".
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">
+          Visualizar
+        </button>
+      </form>
+
     </main>
     <footer class="bg-light text-dark text-opacity-50 fst-italic text-center p-2">
       Copyright &copy; 2023 Rui Pimentel Leite
