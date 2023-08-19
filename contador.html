@@ -3,13 +3,13 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Projeto de exemplo com BS5 e JS</title>
+  <title>Ferramenta "Contador"</title>
   <meta name="description" content="" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <meta property="og:title" content="Homepage do projeto BS5" />
+  <meta property="og:title" content="Ferramenta &quot;Contador&quot;" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="http://localhost:1234/" />
+  <meta property="og:url" content="http://localhost:1234/contador.html" />
   <meta property="og:image" content="/icon.png" />
 
   <link rel="apple-touch-icon" href="icon.png" />
@@ -34,10 +34,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-md-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Seletor de Cor</a>
+              <a class="nav-link" href="index.html">Seletor de Cor</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contador.html">Contador</a>
+              <a class="nav-link active" aria-current="page" href="#">Contador</a>
             </li>
             <li class="nav-item">
               <a class="nav-link disabled">Disabled</a>
@@ -51,37 +51,37 @@
       <div class="p-5 mb-4 bg-light rounded-3">
         <div class="container-fluid py-5">
           <h1 class="display-5 fw-bold">
-            Seletor de cor
+            Contador
           </h1>
           <p class="col-md-8 mx-auto fs-4">
-            Informe o nome ou código da cor no campo abaixo para obter um preview.
+            Utilize os botões abaixo para registrar uma contagem.
           </p>
         </div>
       </div>
 
-      <form class="mx-auto" style="max-width: 30rem;">
-        <div class="mb-3">
-          <label
-            for="input-cor"
-            class="form-label"
-          >
-            Cor:
-          </label>
-          <input
-            type="text"
-            class="form-control"
-            id="input-cor"
-            aria-describedby="help-cor"
-          />
-          <div id="help-cor" class="form-text">
-            A cor deve ser informada em um dos padrões "Web colors".
-          </div>
-        </div>
-        <button type="submit" class="btn btn-primary">
-          Visualizar
+      <div class="d-flex flex-column d-sm-inline-block mx-sm-auto">
+        <button
+          id="botao-menos"
+          class="order-2 btn btn-danger"
+          type="button"
+        >
+          <i class="bi bi-dash-circle-fill"></i>
+          <!-- menos -->
+          1
         </button>
-      </form>
-      <div id="mensagens-erro"></div>
+        <button
+          id="botao-mais"
+          class="order-1 btn btn-success"
+          type="button"
+        >
+          <i class="bi bi-plus-circle-fill"></i>
+          <!-- mais -->
+          1
+        </button>
+        <output class="d-block order-3 display-1 fw-bold py-5">
+          0
+        </output>
+      </div>
 
     </main>
     <footer class="bg-light text-dark text-opacity-50 fst-italic text-center p-2">
@@ -93,7 +93,7 @@
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/contador.js"></script>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
