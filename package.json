@@ -15,8 +15,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "bootstrap-icons": "^1.10.5",
-    "parcel-bundler": "^1.12.4"
+    "bootstrap-icons": "^1.10.5"
   },
   "dependencies": {
     "bootstrap": "^5.3.1"
