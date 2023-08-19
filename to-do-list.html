@@ -3,13 +3,13 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Ferramenta "Contador"</title>
+  <title>Ferramenta "To-Do List"</title>
   <meta name="description" content="" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <meta property="og:title" content="Ferramenta &quot;Contador&quot;" />
+  <meta property="og:title" content="Ferramenta &quot;To-Do List&quot;" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="http://localhost:1234/contador.html" />
+  <meta property="og:url" content="http://localhost:1234/cronometro.html" />
   <meta property="og:image" content="/icon.png" />
 
   <link rel="apple-touch-icon" href="icon.png" />
@@ -37,13 +37,13 @@
               <a class="nav-link" href="index.html">Seletor de Cor</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Contador</a>
+              <a class="nav-link" href="contador.html">Contador</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="cronometro.html">Cronômetro</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="to-do-list.html">To-Do List</a>
+              <a class="nav-link active" aria-current="page" href="#">To-Do List</a>
             </li>
           </ul>
         </div>
@@ -54,36 +54,55 @@
       <div class="p-5 mb-4 bg-light rounded-3">
         <div class="container-fluid py-5">
           <h1 class="display-5 fw-bold">
-            Contador
+            To-Do List
           </h1>
           <p class="col-md-8 mx-auto fs-4">
-            Utilize os botões abaixo para registrar uma contagem.
+            Adicione e remova tarefas de sua lista. Você também pode marcar
+            tarefas como finalizadas!
           </p>
         </div>
       </div>
 
-      <div class="d-flex flex-column d-sm-inline-block mx-sm-auto">
-        <button
-          id="botao-menos"
-          class="order-2 btn btn-danger"
-          type="button"
-        >
-          <i class="bi bi-dash-circle-fill"></i>
-          <!-- menos -->
-          1
-        </button>
-        <button
-          id="botao-mais"
-          class="order-1 btn btn-success"
-          type="button"
-        >
-          <i class="bi bi-plus-circle-fill"></i>
-          <!-- mais -->
-          1
-        </button>
-        <output class="d-block order-3 display-1 fw-bold py-5">
-          0
-        </output>
+      <div
+        id="tarefas"
+        class="container"
+        style="max-width: 40em;"
+      >
+        <div class="row">
+          <div class="col">
+            <button
+              id="botao-adicionar"
+              type="button"
+              class="btn btn-success"
+            >
+              <i class="bi bi-plus-circle-fill"></i>
+              Adicionar
+            </button>
+          </div>
+        </div>
+        <div class="row mt-2">
+          <div class="col d-flex align-items-center">
+            <input
+              type="text"
+              class="flex-grow-1 form-control"
+              placeholder="Digite aqui a tarefa..."
+            />
+            <div class="form-check form-switch ms-2 me-1">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                role="switch"
+                style="width: 3em; height: 1.5em;"
+              />
+            </div>
+            <button
+              type="button"
+              class="btn btn-danger text-center"
+            >
+              <i class="bi bi-trash-fill"></i>
+            </button>
+          </div>
+        </div>
       </div>
 
     </main>
@@ -96,7 +115,7 @@
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-  <script src="js/contador.js"></script>
+  <script src="js/cronometro.js"></script>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
