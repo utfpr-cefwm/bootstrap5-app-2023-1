@@ -3,13 +3,13 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Ferramenta "To-Do List"</title>
+  <title>Ferramenta "Gerador de Senha"</title>
   <meta name="description" content="" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <meta property="og:title" content="Ferramenta &quot;To-Do List&quot;" />
+  <meta property="og:title" content="Ferramenta &quot;Gerador de Senha&quot;" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="http://localhost:1234/cronometro.html" />
+  <meta property="og:url" content="http://localhost:1234/gerador-de-senha.html" />
   <meta property="og:image" content="/icon.png" />
 
   <link rel="apple-touch-icon" href="icon.png" />
@@ -43,10 +43,10 @@
               <a class="nav-link" href="cronometro.html">Cronômetro</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">To-Do List</a>
+              <a class="nav-link" href="to-do-list.html">To-Do List</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="gerador-de-senha.html">Gerador de Senha</a>
+              <a class="nav-link active" aria-current="page" href="#">Gerador de Senha</a>
             </li>
           </ul>
         </div>
@@ -57,11 +57,10 @@
       <div class="p-5 mb-4 bg-light rounded-3">
         <div class="container-fluid py-5">
           <h1 class="display-5 fw-bold">
-            To-Do List
+            Gerador de Senha
           </h1>
           <p class="col-md-8 mx-auto fs-4">
-            Adicione e remova tarefas de sua lista. Você também pode marcar
-            tarefas como finalizadas!
+            Gera uma senha aleatória de acordo com as configurações selecionadas.
           </p>
         </div>
       </div>
@@ -72,6 +71,82 @@
         style="max-width: 40em;"
       >
         <div class="row">
+          <div class="col-12 col-md-7 text-start">
+            <div class="form-check form-switch">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                role="switch"
+                id="numeros"
+                checked
+              />
+              <label
+                class="form-check-label"
+                for="numeros"
+              >
+                Números (0-9)
+              </label>
+            </div>
+            <div class="form-check form-switch">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                role="switch"
+                id="maiusculas"
+                checked
+              />
+              <label
+                class="form-check-label"
+                for="maiusculas"
+              >
+                Maiúsculas (A-Z)
+              </label>
+            </div>
+            <div class="form-check form-switch">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                role="switch"
+                id="minusculas"
+                checked
+              />
+              <label
+                class="form-check-label"
+                for="minusculas"
+              >
+                Minúsculas (a-z)
+              </label>
+            </div>
+            <div class="form-check form-switch">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                role="switch"
+                id="especiais"
+              />
+              <label
+                class="form-check-label"
+                for="especiais"
+              >
+                Especiais (!@#$%&*-_=+,.:;~)
+              </label>
+            </div>
+          </div>
+          <div class="col-12 col-md-5 text-start">
+            <label
+              for="comprimento"
+              class="form-label"
+            >
+              Comprimento:
+            </label>
+            <input
+              type="number"
+              class="form-control d-inline-block"
+              id="comprimento"
+              value="12"
+              style="max-width: 5em;"
+            />
+          </div>
           <div class="col">
             <button
               id="botao-adicionar"
@@ -95,7 +170,7 @@
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-  <script src="js/to-do-list.js"></script>
+  <script src="js/gerador-de-senha.js"></script>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
