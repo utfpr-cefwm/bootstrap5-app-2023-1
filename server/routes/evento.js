@@ -4,11 +4,13 @@ var router = express.Router();
 /* GET users listing. */
 router.get('/', function(req, res, next) {
 
-  const data = new Date('2022-12-31');
+  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:1234');
+
+  const data = new Date('1 Jan 2024 03:00:00 GMT');
 
   res.json({
     nome: 'Reveillon',
-    data: data.toISOString(),
+    data: data.toUTCString(),
   });
 
 });

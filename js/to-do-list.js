@@ -55,3 +55,20 @@ function adicionaLinha() {
   inputText.focus();
 
 }
+
+fetch('http://localhost:3000/evento', {
+  method: 'GET',
+}).then(
+  res => res.json()
+).then(obj => {
+  const data = new Date(obj.data);
+  console.log(data);
+  console.log(data.getUTCDate());
+  console.log(data.getUTCMonth() + 1);
+  console.log(data.getUTCFullYear());
+  console.log(data.getDate());
+  console.log(data.getMonth() + 1);
+  console.log(data.getFullYear());
+  const msAteReveillon = data.getTime() - Date.now();
+  console.log(msAteReveillon);
+});
